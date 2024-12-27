@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+
+/*Parte del menu de arriba:*/
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Alineación vertical */
+    list-style: none;
+    /* Elimina los puntos de las listas */
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    position: fixed;
+    /* Fija el elemento */
+    top: 0;
+    /* Distancia desde la parte superior */
+    left: 0;
+    width: 100%;
+    /* Ocupa todo el ancho */
+    z-index: 1000;
+    /* Asegura que quede encima de otros elementos */
+
+}
+
+
+#parte-izquierda-menu,
+#parte-derecha-menu {
+    display: flex;
+    /* Alinea los <li> horizontalmente */
+    gap: 20px;
+    /* Espaciado entre elementos */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* Elimina los puntos de las listas */
+}
+
+
+#menu .item-logo-menu img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#menu .item-izquierda img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#menu #parte-derecha-menu a {
+    text-decoration: none;
+    color: #b3cc3d;
+}
+
+
+/*Parte del main*/
+main {
+    background-color: #f5f5ef;
+    margin: 0;
+}
+
+/*Primera parte de la página*/
+#inicio-logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo-principal {
+    width: 800px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#primer-imagen {
+    width: 800px;
+    height: auto;
+    clip-path: inset(0 34% 0 0);
+    /* Muestra solo la mitad izquierda */
+    border-radius: 20%;
+    /* Redondea las esquinas */
+    object-fit: cover;
+    /* Asegura que la imagen mantenga proporciones dentro del recorte */
+
+}
+
+
+/*primera frase*/
+main #primer-frase{
+    font-family: 'Roboto Slab', serif;
+    padding-left: 100px;
+    font-size: 30px;
+    margin-top: -160px;
+    font-weight: bold;
+}
+
+main #primer-frase #compromiso {
+        color: #3c3c3b;
+        display: inline;
+}
+
+
+/*proposito*/
+
+#proposito{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 178px;
+    margin: 100px 0 0 0;
+    background-color: #e3e5c2;
+    text-align: center;
+}
+
+#titulo-proposito{
+    font-family:'Roboto Slab' ;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+#parrafo-proposito{
+    font-family: 'Roboto';
+    font-size: 15px;
+
+}
+
+#imagen-proposito{
+    width: 75px;
+    height: auto;
+}
+
