@@ -84,7 +84,6 @@ main {
     /* Redondea las esquinas */
     object-fit: cover;
     /* Asegura que la imagen mantenga proporciones dentro del recorte */
-
 }
 
 
@@ -133,3 +132,165 @@ main #primer-frase #compromiso {
     height: auto;
 }
 
+main img{
+    width: 100%;
+}
+
+/*parte de servicios*/
+
+#servicios {
+    padding: 20px;
+    display: flex;
+}
+
+#servicios .item-servicio {
+    flex: 1; /* Distribuye uniformemente los elementos */
+    margin: 10px; /* Agrega espacio entre los elementos */
+    border: 1px solid #ccc; /* Borde opcional */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    text-align: center;
+}
+
+
+#servicios .item-servicio img{
+    width: 80px;
+    height: auto;
+}
+
+#servicios > div {
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si el espacio es limitado */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+}
+
+.item-servicio ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+}
+
+.item-servicio ul li {
+    margin: 5px 0; /* Espaciado entre los elementos de la lista */
+}
+
+
+#servicios #seguridad{
+    background-color: #545454;
+}
+
+#servicios #habilitaciones{
+    background-color: #b3cc3d;
+}
+
+#servicios #medio-ambiente{
+    background-color: #e3e5c2;
+}
+
+
+/* Parte clientes */
+
+#nuestros-clientes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family:'Roboto Slab' ;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 15px;
+    background-color: #f5f5ef;
+}
+
+#nuestros-clientes img{
+    width: 50px;
+}
+/*logos -----------------------*/
+
+#logo-clientes #igarreta{
+    width: 300px;
+}
+#logo-clientes #farmacity{
+    width: 300px;
+}
+
+#logo-clientes #trento{
+    width: 80px;
+}
+
+#logo-clientes #tom{
+    width: 120px;
+}
+
+
+#logo-clientes #mercedes{
+    width: 350px;
+}
+
+#logo-clientes #scania{
+    width: 250px;
+}
+
+#logo-clientes #emiva{
+    width: 150px;
+}
+#logo-clientes #serquim{
+    width: 150px;
+}
+
+#logo-clientes {
+    background-color: #e3e5c2;
+    display: grid; /* Activar CSS Grid */
+    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
+    padding: 20px;
+
+  }
+
+  #clientes-primer-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #clientes-segunda-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #logo-clientes img {
+    max-width: 50%; /* Asegura que las imágenes no excedan su contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    justify-self: center; /* Centra las imágenes dentro de cada celda */
+    margin: 10px;
+  }
+  
+
+
+  /*segunda frase*/
+
+  main #segunda-frase {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; /* Alinea los elementos verticalmente */
+    font-family: 'Roboto Slab', serif;
+    padding-left: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #f5f5ef;
+}
+
+main #segunda-frase img {
+    width: 95px;
+    height: auto;
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+
+main #segunda-frase #un-proposito {
+        color: #3c3c3b;
+        display: inline;
+}
+
+
+
+/*formulario*/
