@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
 
-
+body{
+    margin: 0;
+}
 /*Parte del menu de arriba:*/
+
 
 #menu {
     display: flex;
@@ -30,9 +33,12 @@
 #parte-derecha-menu {
     display: flex;
     /* Alinea los <li> horizontalmente */
-    gap: 20px;
+    gap: 30px;
     /* Espaciado entre elementos */
-    padding: 0;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 5px;
     margin: 0;
     list-style: none;
     /* Elimina los puntos de las listas */
@@ -40,7 +46,8 @@
 
 
 #menu .item-logo-menu img {
-    width: 50px;
+    padding-top: 3px;
+    width: 85px;
     height: auto;
     margin-right: 10px;
 }
@@ -53,14 +60,16 @@
 
 #menu #parte-derecha-menu a {
     text-decoration: none;
-    color: #b3cc3d;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: bold;
 }
 
 
 /*Parte del main*/
 main {
     background-color: #f5f5ef;
-    margin: 0;
 }
 
 /*Primera parte de la página*/
@@ -76,14 +85,10 @@ main {
 }
 
 #primer-imagen {
-    width: 800px;
-    height: auto;
-    clip-path: inset(0 34% 0 0);
-    /* Muestra solo la mitad izquierda */
-    border-radius: 20%;
+    margin-top: 100px;
+    height: 450px;
+    border-radius: 10% 0 0 10%;
     /* Redondea las esquinas */
-    object-fit: cover;
-    /* Asegura que la imagen mantenga proporciones dentro del recorte */
 }
 
 
@@ -165,8 +170,8 @@ main img{
 }
 
 .item-servicio ul {
-    list-style: none; /* Elimina los puntos de la lista */
-    padding: 0;
+    padding-left: 35px;
+    text-align: start;
 }
 
 .item-servicio ul li {
@@ -273,8 +278,8 @@ main img{
     justify-content: space-evenly;
     align-items: center; /* Alinea los elementos verticalmente */
     font-family: 'Roboto Slab', serif;
-    padding-left: 100px;
-    font-size: 30px;
+    padding-left: 15px;
+    font-size: 25px;
     font-weight: bold;
     background-color: #f5f5ef;
 }
@@ -294,3 +299,83 @@ main #segunda-frase #un-proposito {
 
 
 /*formulario*/
+
+#contact{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ padding-left: 50px;
+ background-color: black;
+}
+
+#contact #contacto-parte-izquierda{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#contact #contacto-parte-derecha img{
+    width: 350px;
+}
+
+#contact #contacto-parte-derecha{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+    padding-right: 50px;
+}
+
+#contact #contacto-parte-izquierda #message{
+    width: 500px;
+    height: 75px;
+}
+
+#contact h2{
+    color: #b3cc3d;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#contact p {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+
+/*footer:*/
+footer {
+    height: 90px;
+    background-color: #545454;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "imagenes imagenes imagenes"
+        ". texto .";
+    gap: 10px; /* Opcional para espacios entre áreas */
+    padding: 10px; /* Para darle espacio interior */
+}
+
+#imagenes-footer {
+    grid-area: imagenes;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; /* Para centrar verticalmente las imágenes */
+}
+
+footer p {
+    grid-area: texto;
+    text-align: center; /* Centra el texto dentro de su área */
+    color: #b3cc3d;
+}
+
+footer #instagram{
+    width: 50px;
+}
+
+footer #facebook{
+    width: 32px;
+}
+
+footer #linkedin{
+    width: 45px;
+}
