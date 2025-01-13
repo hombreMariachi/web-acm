@@ -6,3 +6,12 @@
     margin: 0;
     padding: 0;
 }
+
+
+.menu .menu-izquierda a.logo img {
+    width: 80px;
+}
+
+.menu .menu-izquierda nav a img {
+    width: 30px;
+}
