@@ -7,11 +7,471 @@
     padding: 0;
 }
 
+/*Grid padre-------------------------------------------------*/
 
-.menu .menu-izquierda a.logo img {
+.grid-container {
+    display: grid;
+    grid-template-areas: "menu menu menu menu"
+        "sobre-nosotros sobre-nosotros sobre-nosotros sobre-nosotros"
+        "sobre-nosotros sobre-nosotros sobre-nosotros sobre-nosotros"
+        "clientes clientes clientes clientes"
+        "clientes clientes clientes clientes"
+        "footer footer footer footer";
+}
+
+/*Parte del menu-----------------------------------------------*/
+
+header {
+    background-color: black;
+    grid-area: menu;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 1;
+
+}
+
+header .menu-izquierda {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    gap: 40px;
+    padding-left: 0.8rem;
+    flex-wrap: wrap;
+}
+
+header .menu-izquierda .item-logo-menu img {
     width: 80px;
 }
 
-.menu .menu-izquierda nav a img {
+header .item-izquierda a img {
     width: 30px;
+}
+
+header .item-izquierda a {
+    transition: background-color 0.3s ease;
+}
+
+.item-izquierda a:hover {
+    background-color: #555;
+    /* Efecto hover */
+    padding: 20px 10px;
+}
+
+header .menu-derecha {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+    padding-right: 1rem;
+    flex-wrap: wrap;
+}
+
+
+header .menu-derecha .item-derecha a {
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.item-derecha a:hover {
+    background-color: #555;
+    /* Efecto hover */
+    padding: 10px 15px;
+}
+
+/*Parte sobre nosotros--------------------------------------------*/
+
+#seccion-sobre-nosotros {
+    grid-area: sobre-nosotros;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+
+#seccion-sobre-nosotros h1 {
+    height: 10vh;
+    font-family: 'Roboto Slab', serif;
+    background-color: #e3e5c2;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#seccion-sobre-nosotros .sobreNosotros-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#seccion-sobre-nosotros .sobreNosotros-content img {
+    width: 150vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#seccion-sobre-nosotros .sobreNosotros-content p {
+    font-family: 'Roboto', serif;
+    font-size: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: justify;
+}
+
+/*Parte clientes -------------------------------------------------*/
+
+#clientes {
+    grid-area: clientes;
+    padding-top: 20px;
+    z-index: 1;
+
+}
+
+#clientes .cliente-titulo-img {
+    background-color: #e3e5c2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+#clientes h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+}
+
+#clientes .cliente-titulo-img img {
+    width: 55px;
+}
+
+#clientes .clientes-flex {
+
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+
+}
+
+.logo-Igarreta {
+    width: 200px;
+}
+
+.logo-Farmacity {
+    width: 200px;
+}
+
+.logo-Trento {
+    width: 50px;
+}
+
+.logo-TOM {
+    width: 80px;
+}
+
+.logo-Mercedes-Benz {
+    width: 250px;
+}
+
+.logo-Scania {
+    width: 150px;
+}
+
+.logo-Emiva {
+    width: 110px;
+}
+
+.logo-Serquim {
+    width: 90px;
+}
+
+
+/*Footer----------------------------------------------------------------*/
+
+footer {
+    padding-top: 20px;
+    grid-area: footer;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, white, #545454);
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+
+}
+
+footer a:hover {
+    color: #545454;
+
+}
+
+footer .parte-contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+
+footer .parte-contacto img {
+    height: 50px;
+    width: auto;
+}
+
+
+footer .parte-contacto h2{
+    background-color: #545454 ;
+    border-radius: 45%;
+    height: 1px;
+}
+
+footer a h2 {
+    padding: 10px 0 50px 10px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    height: 15%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+footer a h2:hover {
+    background-color: #b3cc3d;
+}
+
+
+
+footer .social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer p {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+footer #instagram {
+    width: 50px;
+}
+
+footer #facebook {
+    width: 50px;
+}
+
+footer #linkedin {
+    width: 45px;
+}
+
+/*-----------------------------------------------------MEDIA PARA PANTALLAS-------------------------------------------*/
+@media (max-width: 767px) {
+
+    /* Ajustes generales */
+    .grid-container {
+        grid-template-areas:
+            "menu"
+            "sobre-nosotros"
+            "clientes"
+            "footer";
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .menu-izquierda,
+    .menu-derecha {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    /*PARTE SOBRE NOSOTROS CELULAR --------------------------------------------------------------------CELULAR*/
+
+    #seccion-sobre-nosotros h1 {
+        flex-direction: column;
+    }
+
+    #seccion-sobre-nosotros .sobreNosotros-content {
+        flex-direction: column;
+        padding: 1vh;
+
+    }
+
+    #seccion-sobre-nosotros .sobreNosotros-content img {
+        max-width: 80%;
+        /* Imagen se adapta al ancho del contenedor */
+        height: auto;
+        /* Mantiene las proporciones */
+    }
+
+    #seccion-sobre-nosotros .sobreNosotros-content p {
+        font-size: 20px;
+        /* Reduce el tamaño del texto */
+        padding: 10px;
+        /* Reduce los márgenes internos */
+        text-align: justify;
+        /* Mantiene el texto alineado */
+    }
+
+    /*PARTE CLIENTES CELULAR -------------------------------------------------------------------CELULAR*/
+
+
+    #clientes .cliente-titulo-img {
+        flex-direction: column; /* Apila el título y la imagen verticalmente */
+        align-items: center; /* Centra los elementos */
+        text-align: center; /* Centra el texto */
+        gap: 10px; /* Espacio entre el título y la imagen */
+    }
+
+    #clientes .clientes-flex {
+        flex-direction: column;
+    }
+
+ /*PARTE FOOTER CELULAR ---------------------------------------------------------------------------CELULAR*/
+
+
+    footer .parte-contacto {
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    footer .parte-contacto img {
+        height: 30px;
+        width: auto;
+    }
+
+    footer .parte-contacto a h2 {
+        font-size: 25px;
+        width: auto;
+    }
+
+    footer .social-icons {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 15px;
+    }
+
+}
+
+/* Para tablets (pantallas medianas, entre 768px y 1024px) --------------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Ajusta estilos para tablets */
+
+        /* Ajustes generales ----------------------------------PARA TABLET*/
+        .grid-container {
+            grid-template-areas:
+                "menu menu"
+                "sobre-nosotros sobre-nosotros"
+                "clientes clientes"
+                "footer footer";
+        }
+    
+        header {
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+    
+        .menu-izquierda,
+        .menu-derecha {
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+    
+        /*PARTE SOBRE NOSOTROS TABLET --------------------------------------------------------------------PARA TABLET*/
+    
+        #seccion-sobre-nosotros h1 {
+            flex-direction: column;
+        }
+    
+        #seccion-sobre-nosotros .sobreNosotros-content {
+            flex-direction: column;
+            padding: 1vh;
+    
+        }
+    
+        #seccion-sobre-nosotros .sobreNosotros-content img {
+            max-width: 80%;
+            /* Imagen se adapta al ancho del contenedor */
+            height: auto;
+            /* Mantiene las proporciones */
+        }
+    
+        #seccion-sobre-nosotros .sobreNosotros-content p {
+            font-size: 25px;
+            /* Reduce el tamaño del texto */
+            padding: 10px;
+            /* Reduce los márgenes internos */
+            text-align: justify;
+            /* Mantiene el texto alineado */
+        }
+    
+        /*PARTE CLIENTES TABLET -------------------------------------------------------------------PARA TABLET*/
+    
+    
+        #clientes .cliente-titulo-img {
+            flex-direction: column; /* Apila el título y la imagen verticalmente */
+            align-items: center; /* Centra los elementos */
+            text-align: center; /* Centra el texto */
+            gap: 10px; /* Espacio entre el título y la imagen */
+        }
+    
+        #clientes .clientes-flex {
+            flex-direction: ROW;
+        }
+    
+     /*PARTE FOOTER TABLET ---------------------------------------------------------------------------PARA TABLET*/
+    
+    
+        footer .parte-contacto {
+            justify-content: space-evenly;
+            align-content: center;
+        }
+    
+        footer .parte-contacto img {
+            height: 30px;
+            width: auto;
+        }
+    
+        footer .parte-contacto a h2 {
+            font-size: 25px;
+            width: auto;
+        }
+    
+        footer .social-icons {
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: 15px;
+        }
+
+
 }

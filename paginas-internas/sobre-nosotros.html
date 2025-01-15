@@ -13,40 +13,28 @@
 
 
         <!-- Menú de navegación -->
-        <header class="menu">
+        <header>
+            <ul class="menu-izquierda">
+                <li class="item-logo-menu"><img src="/imagenes/logo/logo-solo-ACM.png" alt="imagen para el menu">
+                </li>
+                <li class="item-izquierda"><a href="/index.html"><img src="/imagenes/elementos/mail.png"
+                            alt="imagen de un sobre"></a></li>
+                <li class="item-izquierda"><a href="/index.html"><img src="/imagenes/elementos/telefono.png"
+                            alt="imagen de un telefono"></a></li>
+            </ul>
 
-            <div class="menu-izquierda">
-
-                <a href="/index.html" class="logo">
-                    <img src="/imagenes/logo/logo-solo-ACM.png" alt="Logo de ACM">
-                </a>
-                
-                <nav>
-                    <a href="mailto:info@acm.com">
-                        <img src="/imagenes/elementos/mail.png" alt="Correo electrónico">
-                    </a>
-                    <a href="tel:+123456789" >
-                        <img src="/imagenes/elementos/telefono.png" alt="Teléfono">
-                    </a>
-                </nav>
-            
-            </div>
-            
-            <nav class="menu-derecha">
-                <ul class="nav-lista">
-                    <li class="nav-item"><a href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a href="sobre-nosotros.html">Sobre nosotros</a></li>
-                    <li class="nav-item"><a href="index.html">Contacto</a></li>
-                </ul>
-            </nav>
-        
+            <ul class="menu-derecha">
+                <li class="item-derecha"><a href="/index.html">Inicio</a></li>
+                <li class="item-derecha"><a href="/paginas-internas/sobre-nosotros.html">Sobre nosotros</a></li>
+                <li class="item-derecha"><a href="/index.html">Contacto</a></li>
+            </ul>
         </header>
 
         <!-- Sección Sobre Nosotros -->
         <section id="seccion-sobre-nosotros">
-            <h1>Sobre Nosotros</h1>
+            <h1>Sobre nosotros</h1>
             <div class="sobreNosotros-content">
-                <img src="/imagenes/imagenes-de-paginas/empleadosACM.png" alt="Empleados de ACM" class="sobreNosotros-imagen">
+                <img src="/imagenes/imagenes-de-paginas/empleadosACM.png" alt="Empleados de ACM">
                 <p>
                     Nuestra consultora de empresas se especializa en el medio ambiente y la seguridad e higiene laboral.
                     Contamos con profesionales en seguridad e higiene, medio ambiente, ingenieros electromecánicos y
@@ -60,8 +48,12 @@
 
         <!-- Sección Clientes -->
         <section id="clientes">
-            <h2>Nuestros clientes lo garantizan</h2>
-            <div class="clientes-grid">
+            <div class="cliente-titulo-img">
+                <h2>Nuestros clientes lo garantizan</h2>
+                <img src="/imagenes/elementos/manos estrechadas.png" alt="imagen de manos estechandose">
+            </div>
+            
+            <div class="clientes-flex">
                 <img src="/imagenes/clientes/igarreta.png" alt="Logo Igarreta" class="logo-Igarreta">
                 <img src="/imagenes/clientes/Farmacity-Marca.png" alt="Logo Farmacity" class="logo-Farmacity">
                 <img src="/imagenes/clientes/Trento.png" alt="Logo Trento" class="logo-Trento">
@@ -72,21 +64,31 @@
                 <img src="/imagenes/clientes/serquim.png" alt="Logo Serquim" class="logo-Serquim">
             </div>
         </section>
-        
+
 
         <!-- Pie de página -->
         <footer>
+
+            <div class="parte-contacto">
+                <img src="/imagenes/elementos/mail-negro.png" alt="imagen de un mail" >
+                <a href="/paginas-internas/sobre-nosotros.html">
+                    <h2>Contactanos</h2>
+                </a>
+                <img src="/imagenes/elementos/telefono-negro.png" alt="imagen de un telefono">
+            </div>
+
             <div class="social-icons">
                 <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                    <img src="/imagenes/redes sociales/instagram.webp" alt="Instagram">
+                    <img src="/imagenes/redes sociales/instagram.webp" alt="Instagram" id="instagram">
                 </a>
                 <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                    <img src="/imagenes/redes sociales/facebook.webp" alt="Facebook">
+                    <img src="/imagenes/redes sociales/facebook1.webp" alt="Facebook" id="facebook">
                 </a>
                 <a href="https://www.linkedin.com" target="_blank" class="social-icon">
-                    <img src="/imagenes/redes sociales/linkedin.webp" alt="LinkedIn">
+                    <img src="/imagenes/redes sociales/linkedin.webp" alt="LinkedIn" id="linkedin">
                 </a>
             </div>
+
             <p>&copy; 2025 ACM. Todos los derechos reservados.</p>
         </footer>
 
