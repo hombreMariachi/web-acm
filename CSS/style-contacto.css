@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Grid padre-------------------------------------------------*/
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "menu menu menu menu"
+        "contacto contacto contacto contacto"
+        "contacto contacto contacto contacto"
+        "contacto contacto contacto contacto"
+        "footer footer footer footer";
+}
+
+
+/*Parte del menu-----------------------------------------------*/
+
+header {
+    background-color: black;
+    grid-area: menu;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 1;
+
+}
+
+header .menu-izquierda {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    gap: 40px;
+    padding-left: 0.8rem;
+    flex-wrap: wrap;
+}
+
+header .menu-izquierda .item-logo-menu img {
+    width: 80px;
+}
+
+header .item-izquierda a img {
+    width: 30px;
+}
+
+header .item-izquierda a {
+    transition: background-color 0.3s ease;
+}
+
+.item-izquierda a:hover {
+    background-color: #555;
+    /* Efecto hover */
+    padding: 20px 10px;
+}
+
+header .menu-derecha {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+    padding-right: 1rem;
+    flex-wrap: wrap;
+}
+
+
+header .menu-derecha .item-derecha a {
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.item-derecha a:hover {
+    background-color: #555;
+    /* Efecto hover */
+    padding: 10px 15px;
+}
+
+
+/*formulario --------------------------------------------------------*/
+
+#contact{
+    display: grid;
+    grid-area: contacto;
+    grid-template-columns: repeat(2,1fr);
+    padding-left: 50px;
+    background-color: #e3e5c2;
+    height: 450px;
+    padding: 20px;
+   }
+   
+   #contact #contacto-parte-izquierda{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+   
+   }
+   
+   #contact #contacto-parte-derecha img{
+       width: 350px;
+   }
+   
+   #contact #contacto-parte-derecha{
+       display: flex;
+       flex-direction: column-reverse;
+       align-items: center;
+       padding-right: 50px;
+   }
+   
+   #contact #contacto-parte-izquierda #message{
+       width: 500px;
+       height: 75px;
+   }
+   
+   #contact h2{
+       color: #b3cc3d;
+       font-family: 'Roboto Slab', serif;
+       font-weight: bold;
+       font-size: 25px;
+   }
+   
+   #contact p {
+       color: BLACK;
+       font-family: 'Roboto';
+       font-size: 15px;
+   }
+
+   /*Footer----------------------------------------------------------------*/
+
+footer {
+    padding-top: 20px;
+    grid-area: footer;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, #e3e5c2, #545454);
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+
+}
+
+footer a:hover {
+    color: #545454;
+
+}
+
+
+footer a h2 {
+    padding: 10px 0 50px 10px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    height: 15%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+footer a h2:hover {
+    background-color: #b3cc3d;
+}
+
+
+
+footer .social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer p {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+footer #instagram {
+    width: 50px;
+}
+
+footer #facebook {
+    width: 50px;
+}
+
+footer #linkedin {
+    width: 45px;
+}
+   
+
+/*-----------------------------------------------------MEDIA PARA PANTALLAS-------------------------------------------*/
+/*Para celulares*/
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-areas: "menu"
+        "contacto"
+        "contacto"
+        "contacto"
+        "footer";
+    }
+
+    /*-----------------------------------------------------PARTE MENU-----------------------------------CEL*/
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .menu-izquierda,
+    .menu-derecha {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /*-----------------------------------------PARTE CONTACTO--------------------------------------CEL*/
+
+    #contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 0;
+    }
+
+    #contact #contacto-parte-izquierda #message{
+        width: 250px;
+    }
+
+    #contact #contacto-parte-derecha{
+        display: flex;
+    }
+
+    #contact #contacto-parte-derecha img{
+        width: 200PX;
+    }
+
+
+    /*-----------------------------------------PARTE FOOTER--------------------------------------CEL*/
+
+
+    footer .social-icons {
+        flex-direction: ROW;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 15px;
+    }
+
+
+
+}
+
+/* Para tablets (pantallas medianas, entre 768px y 1024px) --------------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .grid-container {
+        grid-template-areas: "menu menu"
+        "contacto contacto"
+        "contacto contacto"
+        "contacto contacto"
+        "footer footer";
+    }
+
+    
+    /*-----------------------------------------------------PARTE MENU-----------------------------------TABLET*/
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .menu-izquierda,
+    .menu-derecha {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /*-----------------------------------------PARTE CONTACTO--------------------------------------TABLET*/
+
+    #contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    #contact H2 {
+        font-size: 40px;
+    }
+    #contact p{
+        font-size: 20px;
+    }
+
+    #contact #contacto-parte-izquierda #message{
+        width: 700px;
+    }
+
+    #contact #contacto-parte-derecha{
+        display: flex;
+    }
+
+    #contact #contacto-parte-derecha img{
+        width: 300PX;
+    }
+
+
+    /*-----------------------------------------PARTE FOOTER--------------------------------------TABLET*/
+
+
+    footer .social-icons {
+        flex-direction: ROW;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 15px;
+    }
+}

@@ -1,78 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700;900&display=swap');
 
-body{
+* {
     margin: 0;
+    padding: 0;
 }
+
+/*Grid padre-------------------------------------------------*/
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "menu menu menu menu"
+        "logo-principal logo-principal primer-imagen primer-imagen"
+        "logo-principal logo-principal primer-imagen primer-imagen"
+        "primera-frase primera-frase primer-imagen primer-imagen"
+        "primera-frase primera-frase primer-imagen primer-imagen"
+        "proposito proposito proposito proposito"
+        "hombres-altura-img hombres-altura-img hombres-altura-img hombres-altura-img"
+        "servicios servicios servicios servicios"
+        "edificios-img edificios-img edificios-img edificios-img"
+        "clientes clientes clientes clientes"
+        "clientes clientes clientes clientes"
+        "segunda-frase segunda-frase segunda-frase segunda-frase"
+        "contacto contacto contacto contacto"
+        "contacto contacto contacto contacto"
+        "footer footer footer footer";
+}
+
+
 /*Parte del menu de arriba:*/
 
+/*Parte del menu--------------------------------------------------------------------------------------*/
 
-#menu {
+header {
+    background-color: black;
+    grid-area: menu;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* Alineación vertical */
-    list-style: none;
-    /* Elimina los puntos de las listas */
-    padding: 0;
-    margin: 0;
-    background-color: black;
-    position: fixed;
-    /* Fija el elemento */
-    top: 0;
-    /* Distancia desde la parte superior */
-    left: 0;
-    width: 100%;
-    /* Ocupa todo el ancho */
-    z-index: 1000;
-    /* Asegura que quede encima de otros elementos */
-
-}
-
-
-#parte-izquierda-menu,
-#parte-derecha-menu {
-    display: flex;
-    /* Alinea los <li> horizontalmente */
-    gap: 30px;
-    /* Espaciado entre elementos */
     padding-top: 5px;
-    padding-left: 25px;
-    padding-right: 25px;
     padding-bottom: 5px;
-    margin: 0;
-    list-style: none;
-    /* Elimina los puntos de las listas */
+    z-index: 1;
 }
 
-
-#menu .item-logo-menu img {
-    padding-top: 3px;
-    width: 85px;
-    height: auto;
-    margin-right: 10px;
+header .menu-izquierda {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    gap: 40px;
+    padding-left: 0.8rem;
+    flex-wrap: wrap;
 }
 
-#menu .item-izquierda img {
+header .menu-izquierda .item-logo-menu img {
+    width: 80px;
+}
+
+header .item-izquierda a img {
     width: 30px;
-    height: auto;
-    margin-right: 10px;
 }
 
-#menu #parte-derecha-menu a {
-    text-decoration: none;
+header .item-izquierda a {
+    transition: background-color 0.3s ease;
+}
+
+.item-izquierda a:hover {
+    background-color: #555;
+    /* Efecto hover */
+    padding: 20px 10px 5px 10px;
+}
+
+header .menu-derecha {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+    padding-right: 1rem;
+    flex-wrap: wrap;
+}
+
+
+header .menu-derecha .item-derecha a {
     color: white;
-    font-family: 'Roboto';
+    font-family: 'Roboto Slab', serif;
     font-size: 15px;
-    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.item-derecha a:hover {
+    background-color: #555;
+    /* Efecto hover */
+    padding: 10px 15px;
 }
 
 
-/*Parte del main*/
+/*Parte del main----------------------------------------------*/
 main {
     background-color: #f5f5ef;
 }
 
-/*Primera parte de la página*/
+/*Primera parte de la página-----------------------------------------------------------------------------------*/
 #inicio-logo {
     display: flex;
     justify-content: space-between;
@@ -82,6 +111,7 @@ main {
     width: 800px;
     height: auto;
     margin-right: 10px;
+    grid-area: logo-principal;
 }
 
 #primer-imagen {
@@ -89,28 +119,31 @@ main {
     height: 450px;
     border-radius: 10% 0 0 10%;
     /* Redondea las esquinas */
+    grid-area: primer-imagen;
 }
 
 
 /*primera frase*/
-main #primer-frase{
+main #primer-frase {
     font-family: 'Roboto Slab', serif;
     padding-left: 100px;
     font-size: 30px;
     margin-top: -160px;
     font-weight: bold;
+    grid-area: primera-frase;
 }
 
 main #primer-frase #compromiso {
-        color: #3c3c3b;
-        display: inline;
+    color: #3c3c3b;
+    display: inline;
 }
 
 
-/*proposito*/
+/*proposito-----------------------------------------------------------------------------------------------*/
 
-#proposito{
+#proposito {
     display: flex;
+    grid-area: proposito;
     align-items: center;
     justify-content: start;
     gap: 178px;
@@ -119,54 +152,65 @@ main #primer-frase #compromiso {
     text-align: center;
 }
 
-#titulo-proposito{
-    font-family:'Roboto Slab' ;
+#titulo-proposito {
+    font-family: 'Roboto Slab';
     font-weight: bold;
     font-size: 20px;
 
 }
 
-#parrafo-proposito{
+#parrafo-proposito {
     font-family: 'Roboto';
     font-size: 15px;
 
 }
 
-#imagen-proposito{
+#imagen-proposito {
     width: 75px;
     height: auto;
 }
 
-main img{
+/*imagen de hombres en la altura------------------------------------------------------------------------------------------*/
+#hombres-altura-img {
     width: 100%;
+    grid-area: hombres-altura-img;
 }
 
-/*parte de servicios*/
+/*parte de servicios---------------------------------------------------------------------------------------------------------*/
 
 #servicios {
     padding: 20px;
     display: flex;
+    grid-area: servicios;
 }
 
 #servicios .item-servicio {
-    flex: 1; /* Distribuye uniformemente los elementos */
-    margin: 10px; /* Agrega espacio entre los elementos */
-    border: 1px solid #ccc; /* Borde opcional */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    flex: 1;
+    /* Distribuye uniformemente los elementos */
+    margin: 10px;
+    /* Agrega espacio entre los elementos */
+    border: 1px solid #ccc;
+    /* Borde opcional */
+    padding: 20px;
+    /* Espaciado interno */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra para destacar */
     text-align: center;
 }
 
 
-#servicios .item-servicio img{
+#servicios .item-servicio img {
     width: 80px;
     height: auto;
 }
 
-#servicios > div {
-    flex-wrap: wrap; /* Permite que los elementos se ajusten si el espacio es limitado */
-    justify-content: space-between; /* Espacio uniforme entre elementos */
+#servicios>div {
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten si el espacio es limitado */
+    justify-content: space-between;
+    /* Espacio uniforme entre elementos */
 }
 
 .item-servicio ul {
@@ -175,108 +219,123 @@ main img{
 }
 
 .item-servicio ul li {
-    margin: 5px 0; /* Espaciado entre los elementos de la lista */
+    margin: 5px 0;
+    /* Espaciado entre los elementos de la lista */
 }
 
 
-#servicios #seguridad{
+#servicios #seguridad {
     background-color: #545454;
 }
 
-#servicios #habilitaciones{
+#servicios #habilitaciones {
     background-color: #b3cc3d;
 }
 
-#servicios #medio-ambiente{
+#servicios #medio-ambiente {
     background-color: #e3e5c2;
 }
 
+#edificios-img {
+    width: 100%;
+    grid-area: edificios-img;
+}
 
-/* Parte clientes */
+/* Parte clientes -----------------------------------------------------------------------------------------*/
 
-#nuestros-clientes{
+#nuestros-clientes {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-family:'Roboto Slab' ;
+    font-family: 'Roboto Slab';
     font-weight: bold;
     font-size: 17px;
     padding: 15px;
     background-color: #f5f5ef;
 }
 
-#nuestros-clientes img{
+#nuestros-clientes img {
     width: 50px;
 }
+
 /*logos -----------------------*/
 
-#logo-clientes #igarreta{
-    width: 300px;
-}
-#logo-clientes #farmacity{
+#logo-clientes #igarreta {
     width: 300px;
 }
 
-#logo-clientes #trento{
+#logo-clientes #farmacity {
+    width: 300px;
+}
+
+#logo-clientes #trento {
     width: 80px;
 }
 
-#logo-clientes #tom{
+#logo-clientes #tom {
     width: 120px;
 }
 
 
-#logo-clientes #mercedes{
+#logo-clientes #mercedes {
     width: 350px;
 }
 
-#logo-clientes #scania{
+#logo-clientes #scania {
     width: 250px;
 }
 
-#logo-clientes #emiva{
+#logo-clientes #emiva {
     width: 150px;
 }
-#logo-clientes #serquim{
+
+#logo-clientes #serquim {
     width: 150px;
 }
 
 #logo-clientes {
     background-color: #e3e5c2;
-    display: grid; /* Activar CSS Grid */
-    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
+    display: grid;
+    /* Activar CSS Grid */
+    grid-template-columns: repeat(2, 1fr);
+    /* Crea 2 columnas iguales */
     padding: 20px;
 
-  }
+}
 
-  #clientes-primer-col{
+#clientes-primer-col {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
 
-  #clientes-segunda-col{
+#clientes-segunda-col {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  #logo-clientes img {
-    max-width: 50%; /* Asegura que las imágenes no excedan su contenedor */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    justify-self: center; /* Centra las imágenes dentro de cada celda */
+}
+
+#logo-clientes img {
+    max-width: 50%;
+    /* Asegura que las imágenes no excedan su contenedor */
+    height: auto;
+    /* Mantiene la proporción de las imágenes */
+    justify-self: center;
+    /* Centra las imágenes dentro de cada celda */
     margin: 10px;
-  }
-  
+}
 
 
-  /*segunda frase*/
 
-  main #segunda-frase {
+/*segunda frase*/
+
+main #segunda-frase {
+    grid-area: segunda-frase;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center; /* Alinea los elementos verticalmente */
+    align-items: center;
+    /* Alinea los elementos verticalmente */
     font-family: 'Roboto Slab', serif;
     padding-left: 15px;
     font-size: 25px;
@@ -287,49 +346,51 @@ main img{
 main #segunda-frase img {
     width: 95px;
     height: auto;
-    flex-shrink: 0; /* Evita que la imagen se reduzca */
+    flex-shrink: 0;
+    /* Evita que la imagen se reduzca */
 }
 
 
 main #segunda-frase #un-proposito {
-        color: #3c3c3b;
-        display: inline;
+    color: #3c3c3b;
+    display: inline;
 }
 
 
 
-/*formulario*/
+/*CONTACTO------------------------------------------------------------------------------------------------*/
 
-#contact{
- display: grid;
- grid-template-columns: repeat(2,1fr);
- padding-left: 50px;
- background-color: black;
+#contact {
+    grid-area: contacto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 50px;
+    background-color: black;
 }
 
-#contact #contacto-parte-izquierda{
+#contact #contacto-parte-izquierda {
     display: flex;
     flex-direction: column;
 
 }
 
-#contact #contacto-parte-derecha img{
+#contact #contacto-parte-derecha img {
     width: 350px;
 }
 
-#contact #contacto-parte-derecha{
+#contact #contacto-parte-derecha {
     display: flex;
     flex-direction: column-reverse;
     align-items: end;
     padding-right: 50px;
 }
 
-#contact #contacto-parte-izquierda #message{
+#contact #contacto-parte-izquierda #message {
     width: 500px;
     height: 75px;
 }
 
-#contact h2{
+#contact h2 {
     color: #b3cc3d;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
@@ -342,40 +403,55 @@ main #segunda-frase #un-proposito {
     font-size: 15px;
 }
 
-/*footer:*/
+/*FOOTER ----------------------------------------------------------------------------------------------------*/
 footer {
     height: 90px;
     background-color: #545454;
     display: grid;
+    grid-area: footer;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
         "imagenes imagenes imagenes"
         ". texto .";
-    gap: 10px; /* Opcional para espacios entre áreas */
-    padding: 10px; /* Para darle espacio interior */
+    gap: 10px;
+    /* Opcional para espacios entre áreas */
+    padding: 10px;
+    /* Para darle espacio interior */
 }
 
 #imagenes-footer {
     grid-area: imagenes;
     display: flex;
     justify-content: space-evenly;
-    align-items: center; /* Para centrar verticalmente las imágenes */
+    align-items: center;
+    /* Para centrar verticalmente las imágenes */
 }
+
 
 footer p {
     grid-area: texto;
-    text-align: center; /* Centra el texto dentro de su área */
+    text-align: center;
+    /* Centra el texto dentro de su área */
     color: #b3cc3d;
 }
 
-footer #instagram{
+footer #instagram {
     width: 50px;
 }
 
-footer #facebook{
+footer #facebook {
     width: 32px;
 }
 
-footer #linkedin{
+footer #linkedin {
     width: 45px;
+}
+
+/*-----------------------------------------------------MEDIA PARA PANTALLAS-------------------------------------------*/
+@media (max-width: 767px) {}
+
+/* Para tablets (pantallas medianas, entre 768px y 1024px) --------------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Ajusta estilos para tablets */
 }
