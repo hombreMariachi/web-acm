@@ -4,6 +4,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /*Grid padre-------------------------------------------------*/
@@ -115,7 +120,7 @@ main {
 }
 
 #primer-imagen {
-    margin-top: 100px;
+    margin-top: 50px;
     height: 450px;
     border-radius: 10% 0 0 10%;
     /* Redondea las esquinas */
@@ -127,8 +132,8 @@ main {
 main #primer-frase {
     font-family: 'Roboto Slab', serif;
     padding-left: 100px;
-    font-size: 30px;
     margin-top: -160px;
+    font-size: 30px;
     font-weight: bold;
     grid-area: primera-frase;
 }
@@ -176,6 +181,8 @@ main #primer-frase #compromiso {
     grid-area: hombres-altura-img;
 }
 
+
+
 /*parte de servicios---------------------------------------------------------------------------------------------------------*/
 
 #servicios {
@@ -198,6 +205,11 @@ main #primer-frase #compromiso {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Sombra para destacar */
     text-align: center;
+    transition: transform 0.3s ease; /* Agregado: transición suave para el contenedor */
+}
+
+#servicios .item-servicio:hover {
+    transform: scale(1.05); /* Agregado: agranda el contenedor */
 }
 
 
@@ -365,13 +377,21 @@ main #segunda-frase #un-proposito {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-left: 50px;
-    background-color: black;
+    height: 460px;
+
+    background-image: url('/imagenes/contacto/tecladonegro2.jpg');
+    background-size: cover;
+    /* Ajusta la imagen al contenedor */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
 }
 
 #contact #contacto-parte-izquierda {
     display: flex;
     flex-direction: column;
-
+    justify-content: space-evenly;
 }
 
 #contact #contacto-parte-derecha img {
@@ -447,11 +467,133 @@ footer #linkedin {
     width: 45px;
 }
 
+
 /*-----------------------------------------------------MEDIA PARA PANTALLAS-------------------------------------------*/
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+    .grid-container {
+        grid-template-areas:
+            "menu"
+            "primer-imagen"
+            "logo-principal"
+            "primera-frase"
+            "proposito"
+            "hombres-altura-img"
+            "servicios"
+            "edificios-img"
+            "clientes"
+            "segunda-frase"
+            "contacto"
+            "footer";
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .menu-izquierda,
+    .menu-derecha {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /*------------------------------------------------------------------------------------------------primera parte para celular*/
+    #inicio-logo {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    #logo-principal {
+        height: auto;
+        width: 200px;
+    }
+
+    #primer-imagen {
+        height: auto;
+        width: 200px;
+    }
+
+    main #primer-frase {
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+    }
+
+    /*------------------------------------------------------------------------------------------------servicios y clientes para celular*/
+    #servicios {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #logo-clientes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*------------------------------------------------------------------------------------------------contacto para celular*/
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Asegura que los elementos estén centrados */
+        text-align: center;
+        /* Centra el texto */
+    }
+
+    #contact #contacto-parte-izquierda {
+        width: 100%;
+        /* Asegura que ocupe todo el ancho */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact #contacto-parte-izquierda #message {
+        width: 90%;
+        /* Ajusta el ancho para que no sea demasiado pequeño */
+        max-width: 300px;
+        height: 75px;
+    }
+
+    #contact #contacto-parte-derecha {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* Centra la imagen horizontalmente */
+        align-items: center;
+        /* Asegura que esté alineado verticalmente */
+        margin-top: 20px;
+    }
+
+
+    #contacto-parte-derecha img {
+        width: 250px !important;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*------------------------------------------------------------------------------------------------footer para celular*/
+    footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #imagenes-footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
 
 /* Para tablets (pantallas medianas, entre 768px y 1024px) --------------------------------------------------------- */
 
 @media (min-width: 768px) and (max-width: 1024px) {
     /* Ajusta estilos para tablets */
+
 }
