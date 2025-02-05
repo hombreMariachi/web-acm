@@ -16,10 +16,7 @@ html {
 .grid-container {
     display: grid;
     grid-template-areas: "menu menu menu menu"
-        "logo-principal logo-principal primer-imagen primer-imagen"
-        "logo-principal logo-principal primer-imagen primer-imagen"
-        "primera-frase primera-frase primer-imagen primer-imagen"
-        "primera-frase primera-frase primer-imagen primer-imagen"
+        "primera-parte primera-parte primera-parte primera-parte"
         "proposito proposito proposito proposito"
         "hombres-altura-img hombres-altura-img hombres-altura-img hombres-altura-img"
         "servicios servicios servicios servicios"
@@ -107,40 +104,72 @@ main {
 }
 
 /*Primera parte de la página-----------------------------------------------------------------------------------*/
-#inicio-logo {
-    display: flex;
-    justify-content: space-between;
+
+/* Estilo general del contenedor */
+#primera-parte {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las columnas */
+    align-items: center; /* Alinea el contenido verticalmente */
+    grid-area: primera-parte;
 }
 
+/* Animación de fade-in para las imágenes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de movimiento desde la izquierda para la frase */
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo del logo con animación de fade */
 #logo-principal {
-    width: 800px;
+    width: 600px; /* Ajusta el tamaño del logo */
     height: auto;
-    margin-right: 10px;
-    grid-area: logo-principal;
+    opacity: 0; /* Inicialmente invisible */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Animación fade */
 }
 
-#primer-imagen {
-    margin-top: 50px;
-    height: 450px;
-    border-radius: 10% 0 0 10%;
-    /* Redondea las esquinas */
-    grid-area: primer-imagen;
-}
-
-
-/*primera frase*/
-main #primer-frase {
+/* Estilo de la frase con movimiento desde la izquierda */
+#primer-frase {
     font-family: 'Roboto Slab', serif;
-    padding-left: 100px;
-    margin-top: -160px;
     font-size: 30px;
     font-weight: bold;
-    grid-area: primera-frase;
+    margin-left: 65px;
+    opacity: 0; /* Inicialmente invisible */
+    animation: slideFromLeft 1.5s ease-out forwards; /* Movimiento desde la izquierda */
 }
 
-main #primer-frase #compromiso {
+/* Estilo del compromiso dentro de la frase */
+#compromiso {
     color: #3c3c3b;
     display: inline;
+}
+
+/* Estilo de la imagen principal con animación de fade */
+#primer-imagen {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10% 0 0 10%;
+    margin-top: 50px;
+    opacity: 0; /* Inicialmente invisible */
+    animation: fadeIn 1.5s ease-in-out 0.5s forwards; /* Retraso en la animación */
 }
 
 
@@ -474,9 +503,7 @@ footer #linkedin {
     .grid-container {
         grid-template-areas:
             "menu"
-            "primer-imagen"
-            "logo-principal"
-            "primera-frase"
+            "primera-parte"
             "proposito"
             "hombres-altura-img"
             "servicios"
