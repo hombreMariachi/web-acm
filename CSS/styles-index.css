@@ -108,9 +108,12 @@ main {
 /* Estilo general del contenedor */
 #primera-parte {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
-    gap: 20px; /* Espacio entre las columnas */
-    align-items: center; /* Alinea el contenido verticalmente */
+    grid-template-columns: 1fr 1fr;
+    /* 2 columnas de igual tamaño */
+    gap: 20px;
+    /* Espacio entre las columnas */
+    align-items: center;
+    /* Alinea el contenido verticalmente */
     grid-area: primera-parte;
 }
 
@@ -119,6 +122,7 @@ main {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -130,6 +134,7 @@ main {
         transform: translateX(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -138,10 +143,13 @@ main {
 
 /* Estilo del logo con animación de fade */
 #logo-principal {
-    width: 600px; /* Ajusta el tamaño del logo */
+    width: 600px;
+    /* Ajusta el tamaño del logo */
     height: auto;
-    opacity: 0; /* Inicialmente invisible */
-    animation: fadeIn 1.5s ease-in-out forwards; /* Animación fade */
+    opacity: 0;
+    /* Inicialmente invisible */
+    animation: fadeIn 1.5s ease-in-out forwards;
+    /* Animación fade */
 }
 
 /* Estilo de la frase con movimiento desde la izquierda */
@@ -150,8 +158,10 @@ main {
     font-size: 30px;
     font-weight: bold;
     margin-left: 65px;
-    opacity: 0; /* Inicialmente invisible */
-    animation: slideFromLeft 1.5s ease-out forwards; /* Movimiento desde la izquierda */
+    opacity: 0;
+    /* Inicialmente invisible */
+    animation: slideFromLeft 1.5s ease-out forwards;
+    /* Movimiento desde la izquierda */
 }
 
 /* Estilo del compromiso dentro de la frase */
@@ -168,12 +178,14 @@ main {
     object-position: top;
     border-radius: 10% 0 0 10%;
     margin-top: 50px;
-    opacity: 0; /* Inicialmente invisible */
-    animation: fadeIn 1.5s ease-in-out 0.5s forwards; /* Retraso en la animación */
+    opacity: 0;
+    /* Inicialmente invisible */
+    animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+    /* Retraso en la animación */
 }
 
 
-/*proposito-----------------------------------------------------------------------------------------------*/
+/*proposito-----------------------------------------------------------------------------*/
 
 #proposito {
     display: flex;
@@ -204,7 +216,7 @@ main {
     height: auto;
 }
 
-/*imagen de hombres en la altura------------------------------------------------------------------------------------------*/
+/*imagen de hombres en la altura----------------------------------------------------------*/
 #hombres-altura-img {
     width: 100%;
     grid-area: hombres-altura-img;
@@ -212,7 +224,7 @@ main {
 
 
 
-/*parte de servicios---------------------------------------------------------------------------------------------------------*/
+/*parte de servicios--------------------------------------------------------------------*/
 
 #servicios {
     padding: 20px;
@@ -234,11 +246,13 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Sombra para destacar */
     text-align: center;
-    transition: transform 0.3s ease; /* Agregado: transición suave para el contenedor */
+    transition: transform 0.3s ease;
+    /* Agregado: transición suave para el contenedor */
 }
 
 #servicios .item-servicio:hover {
-    transform: scale(1.05); /* Agregado: agranda el contenedor */
+    transform: scale(1.05);
+    /* Agregado: agranda el contenedor */
 }
 
 
@@ -282,7 +296,7 @@ main {
     grid-area: edificios-img;
 }
 
-/* Parte clientes -----------------------------------------------------------------------------------------*/
+/* Parte clientes ----------------------------------------------------------*/
 
 #nuestros-clientes {
     display: flex;
@@ -368,7 +382,7 @@ main {
 
 
 
-/*segunda frase*/
+/*segunda frase-------------------------------------------------------------------------*/
 
 main #segunda-frase {
     grid-area: segunda-frase;
@@ -399,7 +413,7 @@ main #segunda-frase #un-proposito {
 
 
 
-/*CONTACTO------------------------------------------------------------------------------------------------*/
+/*CONTACTO------------------------------------------------------------------*/
 
 #contact {
     grid-area: contacto;
@@ -452,7 +466,7 @@ main #segunda-frase #un-proposito {
     font-size: 15px;
 }
 
-/*FOOTER ----------------------------------------------------------------------------------------------------*/
+/*FOOTER ---------------------------------------------------------------*/
 footer {
     height: 90px;
     background-color: #545454;
@@ -497,7 +511,7 @@ footer #linkedin {
 }
 
 
-/*-----------------------------------------------------MEDIA PARA PANTALLAS-------------------------------------------*/
+/*-----------------------------------------------------MEDIA PARA PANTALLAS-----------------------------------------------------------------------------*/
 @media (max-width: 767px) {
 
     .grid-container {
@@ -527,7 +541,7 @@ footer #linkedin {
         gap: 10px;
     }
 
-    /*------------------------------------------------------------------------------------------------primera parte para celular*/
+    /*------------------------------------------------------------------------------------------------primera parte para celular ------ CELULAR*/
     #inicio-logo {
         display: flex;
         flex-direction: column;
@@ -551,18 +565,136 @@ footer #linkedin {
         font-size: 15px;
     }
 
-    /*------------------------------------------------------------------------------------------------servicios y clientes para celular*/
+    /*------------------------------------------------------------------------------------------------ proposito-----CELULAR*/
+
+    #proposito{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #titulo-proposito {
+        font-size: 15px;
+    }
+
+    #parrafo-proposito {
+        font-size: 12.5px;
+    
+    }
+        
+    #imagen-proposito {
+        width: 37.5px;
+        height: auto;
+    }
+    
+    
+
+    /*------------------------------------------------------------------------------------------------servicios PARA CELULAR */
     #servicios {
         display: flex;
         flex-direction: column;
+        padding: 10px;
     }
+
+
+    #servicios .item-servicio {
+        margin: 5px;
+        /* Agrega espacio entre los elementos */
+        padding: 10px;
+        transition:none;
+    /* ANULa transicion: transición suave para el contenedor */
+    }
+
+    #servicios .item-servicio:hover {
+        transform:none;
+        /* ANULA agrandar contenedor: agranda el contenedor */
+    }
+    
+    #servicios .item-servicio img {
+        width: 40px;
+    }
+    
+    .item-servicio ul {
+        padding-left: 35px;
+    }
+    
+    .item-servicio ul li {
+        margin: 5px 0;
+        /* Espaciado entre los elementos de la lista */
+    }
+    
+
+
+    /* -------------------------------------------------------------------------------------------- clientes para------- CELULAR*/
+
+    #nuestros-clientes{
+        display: flex;
+        flex-direction: column;
+
+    }
+
 
     #logo-clientes {
         display: flex;
         flex-direction: column;
     }
 
-    /*------------------------------------------------------------------------------------------------contacto para celular*/
+    /*---------------------------------------------------------------------------------------------------logos ------- CELULAR*/
+
+    #logo-clientes #igarreta {
+        width: 150px;
+    }
+
+    #logo-clientes #farmacity {
+        width: 150px;
+    }
+
+    #logo-clientes #trento {
+        width: 40px;
+    }
+
+    #logo-clientes #tom {
+        width: 60px;
+    }
+
+
+    #logo-clientes #mercedes {
+        width: 175px;
+    }
+
+    #logo-clientes #scania {
+        width: 125px;
+    }
+
+    #logo-clientes #emiva {
+        width: 75px;
+    }
+
+    #logo-clientes #serquim {
+        width: 75px;
+    }
+
+    /*------------------------------------------------------------------------------------------------SEGUNDA FRASE ---------- CELULAR*/
+
+    main #segunda-frase {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        padding-left: 0;
+    }
+
+    
+    main #segunda-frase img {
+        width: 47.5px;
+        height: auto;
+        flex-shrink: 0;
+        /* Evita que la imagen se reduzca */
+    }
+
+    /*------------------------------------------------------------------------------------------------contacto para ---------- celular*/
     #contact {
         display: flex;
         flex-direction: column;
@@ -599,10 +731,12 @@ footer #linkedin {
 
 
     #contacto-parte-derecha img {
-        width: 250px !important;
+        width: 175px !important;
         max-width: 100%;
         height: auto;
     }
+
+    /**/
 
     /*------------------------------------------------------------------------------------------------footer para celular*/
     footer {
